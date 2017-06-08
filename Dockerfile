@@ -10,4 +10,6 @@ WORKDIR /app
 
 RUN curl -L https://github.com/digitalocean/doctl/releases/download/v${DOCTL_VERSION}/doctl-${DOCTL_VERSION}-linux-amd64.tar.gz  | tar xz
 
+RUN apk add --no-cache openssh
+
 ENTRYPOINT ["./doctl"]
